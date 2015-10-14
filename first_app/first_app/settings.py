@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST ='smtp.mandrillapp.com'
+EMAIL_HOST_USER= 'victorgichohi48@gmail.com'
+EMAIL_HOST_PASSWORD='tK1YZfYMFKQKqVW4sW2Abg'
+
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+
 
 # Application definition
 
@@ -35,7 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    
+
     'django.contrib.sites',
     'registration',
     'django.contrib.messages',
@@ -117,3 +124,6 @@ STATICFILES_DIRS = (
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
 REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+
+
+SITE_ID= 1
