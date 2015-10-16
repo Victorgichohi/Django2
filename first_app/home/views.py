@@ -5,6 +5,10 @@ from .forms import FeedBackform
 from .models import student
 # Create your views here.
 def index(request):
+		return render(request,'index.html', context)
+		
+
+def reques(request):
 	form = StudentForm(request.POST or None)
 	context={
 	"hello_message" :"Register?",
@@ -15,7 +19,7 @@ def index(request):
 		context={
 		    "hello_message":"You've been saved:-)"
           }
-	return render(request,'index.html', context)
+
 def feedback(request):
 
 	form=FeedBackform()
