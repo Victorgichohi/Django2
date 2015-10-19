@@ -5,10 +5,11 @@ from .forms import FeedBackform
 from .models import student
 # Create your views here.
 def index(request):
-		return render(request,'index.html', context)
-		
+	context={}
+	return render(request,'bootstrap_index.html', context)
 
-def reques(request):
+
+def register(request):
 	form = StudentForm(request.POST or None)
 	context={
 	"hello_message" :"Register?",
